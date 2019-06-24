@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script>
+      function getURL(){
+        var canvas=$(".baseChart").get(0);
+        var dataURL=canvas.toDataURL('image/jpeg');
+        console.log(dataURL);
+      }
+      
+      </script>
+  </head>
+<body>
+
+
+
+
+<div>
+  <div style="display: block">
+    <canvas baseChart id="barchart"
+        [datasets]="BarChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"></canvas>
+  
+  </div>
+  <div class="container">
+<button type="submit" class="btn btn-primary" (click)="urldisplay()">Get Base64 URL</button>
+
+  </div>
+</div>
+
+</body>
+</html>
